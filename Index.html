@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ebiline | Glow Like a Gem</title>
+    
+    <!-- Google Fonts for Luxury Aesthetic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;1,6..96,400;1,6..96,600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            light: '#f9e596',
+                            DEFAULT: '#d4af37', /* Brighter, truer gold */
+                            dark: '#b5952f',
+                        },
+                        ocean: {
+                            DEFAULT: '#589c90',
+                        },
+                        stone: {
+                            50: '#fafafa',
+                            100: '#f5f5f4',
+                            800: '#292524',
+                            900: '#1c1917',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['"Bodoni Moda"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Iridescent Text Effect */
+        .iridescent-text {
+            background: linear-gradient(to right, #9c7c3f, #589c90, #735b8c, #c5a059);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% auto;
+            animation: shine 4s linear infinite;
+        }
+
+        @keyframes shine {
+            to {
+                background-position: 200% center;
+            }
+        }
+
+        /* Gem Shimmer Text Effect for Slogan */
+        .gem-shimmer-text {
+            /* Aquamarine, Amethyst, Sapphire, Rose Quartz, Aquamarine */
+            background: linear-gradient(to right, #589c90, #8a63a6, #6fa8dc, #f8a5c2, #589c90);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% auto;
+            animation: shine 5s linear infinite;
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Glassmorphism for the form */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Gem-Like Iridescent Background (Pure CSS - No images to break) */
+        body {
+            background-color: #faf9f7; /* Soft natural stone base */
+            background-image: 
+                radial-gradient(at 10% 10%, rgba(197, 160, 89, 0.18) 0px, transparent 50%), /* Soft Gold Glow */
+                radial-gradient(at 85% 20%, rgba(88, 156, 144, 0.12) 0px, transparent 50%), /* Soft Ocean Teal Glow */
+                radial-gradient(at 30% 85%, rgba(115, 91, 140, 0.12) 0px, transparent 50%), /* Soft Lavender Glow */
+                radial-gradient(at 90% 90%, rgba(197, 160, 89, 0.15) 0px, transparent 50%); /* Soft Gold Glow */
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+        
+        .bg-overlay {
+            /* Kept transparent to let the glowing background shine clearly */
+            background: transparent;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body class="font-sans text-stone-800 antialiased selection:bg-gold selection:text-white">
+<div class="bg-overlay">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-stone-200 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <span class="font-serif text-3xl md:text-4xl tracking-[0.15em] text-gold uppercase italic drop-shadow-sm">Ebiline</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <span class="text-xl font-serif italic gem-shimmer-text font-semibold tracking-wide">Glow Like a Gem</span>
+                    <a href="#preorder" class="bg-stone-900 hover:bg-stone-800 text-white px-6 py-2 rounded-full text-sm font-medium transition-colors duration-300 shadow-sm">
+                        Pre-order Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+                
+                <!-- Text Content -->
+                <div class="mb-12 lg:mb-0 text-center lg:text-left bg-white/70 backdrop-blur-sm p-8 md:p-12 border-2 border-gold shadow-2xl">
+                    <h2 class="text-sm font-bold tracking-[0.2em] text-stone-900 uppercase mb-4">Introducing</h2>
+                    <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl mb-6 text-stone-900 leading-tight">
+                        <span class="iridescent-text">Iridescence</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-stone-800 mb-8 max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed">
+                        Unveil your skin's natural brilliance. Crafted from earth's finest minerals and ocean botanicals for your ultimate, gem-like radiance.
+                    </p>
+
+                    <!-- Elevated Pricing Display -->
+                    <div class="flex flex-row justify-center lg:justify-start items-center gap-8 mb-10">
+                        <div class="text-center lg:text-left">
+                            <span class="block text-[10px] font-bold tracking-[0.2em] text-stone-500 uppercase mb-1">Discovery Size</span>
+                            <span class="font-serif text-2xl text-stone-900">20g <span class="text-gold font-sans mx-1 text-lg">|</span> $10</span>
+                        </div>
+                        <div class="h-10 w-px bg-stone-300"></div>
+                        <div class="text-center lg:text-left">
+                            <span class="block text-[10px] font-bold tracking-[0.2em] text-gold uppercase mb-1">Signature Size</span>
+                            <span class="font-serif text-2xl text-stone-900">50g <span class="text-gold font-sans mx-1 text-lg">|</span> $25</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#preorder" class="bg-stone-900 hover:bg-stone-800 text-white px-8 py-4 text-center text-sm font-medium tracking-wide transition-all shadow-lg hover:shadow-xl">
+                            Reserve Your Jar
+                        </a>
+                        <a href="#details" class="bg-white hover:bg-stone-100 border border-stone-200 text-stone-800 px-8 py-4 text-center text-sm font-medium tracking-wide transition-all">
+                            Discover More
+                        </a>
+                    </div>
+                    <p class="mt-6 text-sm text-stone-700 italic">Limited first-run batch. Secure yours before they're gone.</p>
+                </div>
+
+                <!-- Product Image -->
+                <div class="relative mx-auto w-full max-w-md lg:max-w-full">
+                    <!-- Decorative background element -->
+                    <div class="absolute inset-0 bg-gold/10 rounded-full blur-3xl transform scale-105"></div>
+                    
+                    <img src="image_e4788b.jpg" 
+                         alt="Ebiline Iridescence 50g and 20g Jars" 
+                         class="relative rounded-2xl shadow-2xl object-cover w-full h-[500px] lg:h-[600px] border border-white/50"
+                         onerror="this.src='https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?q=80&w=1000&auto=format&fit=crop'; this.alt='Placeholder Image (Please ensure image_e4788b.jpg is in the same folder)';"
+                    >
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Details Section -->
+    <section id="details" class="py-20 bg-white/60 backdrop-blur-sm border-y border-stone-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="font-serif text-4xl md:text-5xl text-stone-900 mb-4 italic">Pure Ingredients, Real Glow</h2>
+                <div class="w-16 h-0.5 bg-gold mx-auto mb-6"></div>
+                <p class="text-stone-800 text-lg">Iridescence is meticulously hand-crafted from the earth's finest raw materials, designed for your ultimate radiance.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-12 text-center">
+                <div class="p-6 bg-white/80 rounded-2xl shadow-sm border border-white">
+                    <div class="w-12 h-12 bg-stone-50 rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm border border-stone-100">
+                        <svg class="w-6 h-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                    </div>
+                    <h3 class="font-serif text-2xl text-stone-900 mb-3 italic">Earth's Core</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">Formulated with deeply purifying <strong>Bentonite Clay</strong> and <strong>Baking Soda</strong> to draw out impurities and gently exfoliate.</p>
+                </div>
+                <div class="p-6 bg-white/80 rounded-2xl shadow-sm border border-white">
+                    <div class="w-12 h-12 bg-stone-50 rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm border border-stone-100">
+                        <svg class="w-6 h-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+                    </div>
+                    <h3 class="font-serif text-2xl text-stone-900 mb-3 italic">Botanical Elixirs</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">Infused with healing <strong>Tea Tree Oil</strong>, calming <strong>Lavender Oil</strong>, and balancing <strong>Clary Sage Oil</strong> for ultimate skin clarity.</p>
+                </div>
+                <div class="p-6 bg-white/80 rounded-2xl shadow-sm border border-white">
+                    <div class="w-12 h-12 bg-stone-50 rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm border border-stone-100">
+                        <svg class="w-6 h-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="font-serif text-2xl text-stone-900 mb-3 italic">Restorative Tonic</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">Activated with raw <strong>Apple Cider Vinegar</strong> to tone your skin, tighten pores, and restore its natural pH balance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pre-Order Form Section -->
+    <section id="preorder" class="py-24 relative">
+        <!-- Background Pattern/Image -->
+        <div class="absolute inset-0 bg-white/40 backdrop-blur-sm"></div>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="glass-panel rounded-3xl p-8 md:p-12 overflow-hidden relative">
+                
+                <!-- Success Message -->
+                <div id="success-message" class="hidden absolute inset-0 bg-white/95 backdrop-blur-sm z-20 flex flex-col items-center justify-center text-center p-8">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    </div>
+                    <h3 class="font-serif text-3xl text-stone-900 mb-4">You're on the list!</h3>
+                    <p class="text-stone-600 mb-8 max-w-md">Thank you for pre-ordering Iridescence. We will contact you at <span id="success-email" class="font-medium text-stone-900"></span> when your order is ready to ship.</p>
+                    <button type="button" onclick="resetForm()" class="text-gold hover:text-gold-dark font-medium underline underline-offset-4 cursor-pointer">Return to site</button>
+                </div>
+
+                <div class="text-center mb-10">
+                    <h2 class="font-serif text-3xl md:text-4xl text-stone-900 mb-4">Secure Your Glow</h2>
+                    <p class="text-stone-600">Join the exclusive pre-order list. No payment required today.</p>
+                </div>
+
+                <!-- LINKED TO YOUR FORMSPREE -->
+                <form id="preorder-form" action="https://formspree.io/f/xreoapbj" method="POST" class="space-y-6 max-w-xl mx-auto">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="firstName" class="block text-sm font-medium text-stone-700 mb-2">First Name</label>
+                            <input type="text" id="firstName" name="firstName" required class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:ring-2 focus:ring-gold focus:border-gold outline-none transition-all bg-white/50">
+                        </div>
+                        <div>
+                            <label for="lastName" class="block text-sm font-medium text-stone-700 mb-2">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" required class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:ring-2 focus:ring-gold focus:border-gold outline-none transition-all bg-white/50">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-stone-700 mb-2">Email Address</label>
+                        <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:ring-2 focus:ring-gold focus:border-gold outline-none transition-all bg-white/50">
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="size" class="block text-sm font-medium text-stone-700 mb-2">Jar Size</label>
+                            <select id="size" name="size" class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:ring-2 focus:ring-gold focus:border-gold outline-none transition-all bg-white/50 appearance-none">
+                                <option value="50g Signature Jar ($25)" selected>50g Signature Jar — $25</option>
+                                <option value="20g Discovery Jar ($10)">20g Discovery Jar — $10</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="quantity" class="block text-sm font-medium text-stone-700 mb-2">Quantity</label>
+                            <select id="quantity" name="quantity" class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:ring-2 focus:ring-gold focus:border-gold outline-none transition-all bg-white/50 appearance-none">
+                                <option value="1">1 Jar</option>
+                                <option value="2">2 Jars (Most Popular)</option>
+                                <option value="3">3 Jars</option>
+                                <option value="5">5 Jars (Gift Set)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" id="submit-btn" class="w-full bg-stone-900 hover:bg-stone-800 text-white py-4 rounded-xl font-medium tracking-wide transition-all shadow-md hover:shadow-lg mt-4 flex justify-center items-center">
+                        <span id="btn-text">Confirm Pre-Order</span>
+                    </button>
+                    
+                    <p class="text-xs text-center text-stone-500 mt-4">
+                        By submitting this form, you agree to receive updates about Ebiline products. You can unsubscribe at any time.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-stone-900/95 backdrop-blur-md text-stone-400 py-12 border-t border-stone-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+            <span class="font-serif text-3xl md:text-4xl text-gold mb-2 tracking-[0.15em] uppercase italic drop-shadow-sm">Ebiline</span>
+            <span class="text-xl font-serif italic mb-8 gem-shimmer-text font-semibold tracking-wide">Glow Like a Gem</span>
+            
+            <div class="flex space-x-6 mb-8">
+                <a href="#" class="hover:text-white transition-colors">Instagram</a>
+                <a href="#" class="hover:text-white transition-colors">TikTok</a>
+                <a href="#" class="hover:text-white transition-colors">Contact</a>
+            </div>
+            
+            <p class="text-xs">&copy; <span id="year"></span> Ebiline Cosmetics. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Set dynamic copyright year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        const form = document.getElementById('preorder-form');
+        
+        // Handle Form Submission using Fetch (stops page from redirecting to Formspree)
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault(); 
+            
+            const btnText = document.getElementById('btn-text');
+            const originalText = btnText.textContent;
+            btnText.textContent = "Processing...";
+            
+            const data = new FormData(form);
+            const email = document.getElementById('email').value;
+            
+            try {
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: data,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    // Show success screen and clear form
+                    document.getElementById('success-email').textContent = email;
+                    document.getElementById('success-message').classList.remove('hidden');
+                    form.reset();
+                } else {
+                    alert("Oops! There was a problem submitting your pre-order. Please try again.");
+                }
+            } catch (error) {
+                alert("Oops! There was a network error. Please try again later.");
+            } finally {
+                btnText.textContent = originalText;
+            }
+        });
+
+        // Function to close the success screen and return to the form
+        function resetForm() {
+            document.getElementById('success-message').classList.add('hidden');
+        }
+    </script>
+</div>
+</body>
+</html>
